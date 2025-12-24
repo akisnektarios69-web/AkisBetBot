@@ -9,15 +9,22 @@ if (!token) {
 
 const bot = new TelegramBot(token, { polling: true });
 
-bot.on('message', (msg) => {
+bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
-  if (msg.text === '/start') {
-    bot.sendMessage(chatId, '🤖 AkisBetBot ενεργό!\nΣτείλε μου μήνυμα.');
-  } else {
-    bot.sendMessage(chatId, '📩 Πήρα το μήνυμά σου!');
-  }
+  bot.sendMessage(
+    chatId,
+    `🤖 Καλωσήρθες στο AkisBetBot!
+
+Διαθέσιμες επιλογές:
+⚽ /live - Live προτάσεις
+📊 /over - Over επιλογές
+ℹ️ /help - Βοήθεια
+
+📌 Πρωταθλήματα: Ελλάδα & Ευρώπη`
+  );
 });
+
 
 console.log('✅ AkisBetBot τρέχει...');
 const http = require('http');
