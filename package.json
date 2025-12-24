@@ -1,0 +1,12 @@
+{
+  "name": "akisbetbot",
+  "version": "1.0.0",
+  "description": "Telegram bot AkisBetBot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0"
+  }
+}
