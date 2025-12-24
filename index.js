@@ -23,16 +23,24 @@ bot.on('message', (msg) => {
       '3️⃣ HELP\n\n' +
       '📌 Πρωταθλήματα: Ελλάδα & Ευρώπη'
     );
- else if (text === '1') {
+else if (text === '1') {
   bot.sendMessage(
     chatId,
-    '🔥 LIVE ΠΡΟΤΑΣΕΙΣ\n\n' +
-    '• Παναθηναϊκός – Ολυμπιακός\n' +
-    '  Over 2.5 ⚽\n\n' +
-    '• Ρεάλ – Βαλένθια\n' +
-    '  GG ✅'
+    '🔥 LIVE ΠΡΟΤΑΣΕΙΣ (δοκιμαστικό)\n' +
+    'Παναθηναϊκός - Ολυμπιακός\n' +
+    'Over 2.5 ⚽'
   );
 }
+
+else if (text === '/live') {
+  bot.sendMessage(
+    chatId,
+    '🔥 LIVE ΠΡΟΤΑΣΕΙΣ (δοκιμαστικό)\n' +
+    'Παναθηναϊκός - Ολυμπιακός\n' +
+    'Over 2.5 ⚽'
+  );
+}
+
 
   else if (text === '2') {
     bot.sendMessage(chatId, '⚽ OVER ΕΠΙΛΟΓΕΣ (δοκιμαστικό)');
